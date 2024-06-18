@@ -1,0 +1,677 @@
+{
+	"info": {
+		"_postman_id": "2542ab99-d7ec-4ff5-818b-1f2123733c0c",
+		"name": "EasyMoney",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31469257"
+	},
+	"item": [
+		{
+			"name": "PersonalInformation",
+			"item": [
+				{
+					"name": "getAllPersonalInformation",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/personalInformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"personalInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getPersonalInformationById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/personalInformation/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"personalInformation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createPersonalInformation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"typeDocument\": \"CC\",\n    \"documentNumber\": \"1006270847\",\n    \"name\": \"Juan\",\n    \"lastName\": \"David\",\n    \"residence\": \"Calle Alameda\",\n    \"city\": \"Cali\",\n    \"phone\": \"+51 323253232\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/personalInformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"personalInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updatePersonalInformation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"typeDocument\": \"CC\",\n    \"documentNumber\": \"1006270847\",\n    \"name\": \"Juan David\",\n    \"lastName\": \"Jimenez\",\n    \"residence\": \"Calle Alameda\",   \n    \"city\": \"Cali\",\n    \"phone\": \"+51 323253232\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/personalInformation/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"personalInformation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deletePersonalInformation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/personalInformation/2",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"personalInformation",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "WorkingInformation",
+			"item": [
+				{
+					"name": "getAllWorkingInformation",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/workingInformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"workingInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getWorkingInformationById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/workingInformation/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"workingInformation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createWorkingInformation",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nitCompany\": 1234522326789,\n    \"nameCompany\": \"IBM\",\n    \"address\": \"Av. Comercial 456\",\n    \"city\": \"Silycon\",\n    \"phone\": \"+51 2323323233\",\n    \"position\": \"Software Engenieer\",\n    \"salary\": 50000.0,\n    \"dateAdmission\": \"2024-01-15\",\n    \"personalInformationId\": 2\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/workingInformation",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"workingInformation"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateWorkingInformation",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nitCompany\": 123456789,\n    \"nameCompany\": \"Empresa Microsoft\",\n    \"address\": \"Av. Comercial 456\",\n    \"city\": \"Lima\",\n    \"phone\": \"+51 987654321\",\n    \"position\": \"Gerente\",\n    \"salary\": 5000.0,\n    \"dateAdmission\": \"2023-01-15\",\n    \"personalInformationId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/workingInformation/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"workingInformation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteWorkingInformation",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/workingInformation/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"workingInformation",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Reference",
+			"item": [
+				{
+					"name": "getAllReference",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/reference",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"reference"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getReferenceById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/reference/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"reference",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createReference",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"referente1@example.com\",\n    \"name\": \"Pedro\",\n    \"lastName\": \"Gonzalez\",\n    \"address\": \"Av. Referencial 789\",\n    \"phone\": \"+51 987654321\",\n    \"city\": \"Lima\",\n    \"relationship\": \"Amigo\",\n    \"typeReference\": \"Personal\",\n    \"personalInformationId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/reference",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"reference"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateReference",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"PedroGonzalez@example.com\",\n    \"name\": \"Pedro\",\n    \"lastName\": \"Gonzalez\",\n    \"address\": \"Av. Referencial 789\",\n    \"phone\": \"+51 987654321\",\n    \"city\": \"Lima\",\n    \"relationship\": \"Amigo\",\n    \"typeReference\": \"Personal\",\n    \"personalInformationId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/reference/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"reference",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteReference",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/reference/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"reference",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Credit",
+			"item": [
+				{
+					"name": "getAllCredit",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCreditById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/credit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"credit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createCredit",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lineCredit\": \"Master Card\",\n    \"creditAmount\": 200000,\n    \"creditTerm\": \"Tu credito se terminara en 30 dias\",\n    \"description\": \"La persona solicito un credito para comprar ropa\",\n    \"personalInformationId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/credit",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"credit"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCredit",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"lineCredit\": \"Master Card\",\n    \"creditAmount\": \"200000\",\n    \"creditTerm\": \"Tu credito se terminara en 30 dias\",\n    \"description\": \"La persona solicito un credito para comprar ropa\",\n    \"personalInformationId\": 1\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/credit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"credit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCredit",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/credit/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"credit",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "CreditLine",
+			"item": [
+				{
+					"name": "getAllCreditLine",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/creditLine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"creditLine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getCredtiLineById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/creditLine/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"creditLine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "creteCreditLine",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Credit line Master Card\",\n    \"minAmount\": 100000,\n    \"maxAmount\": 5000000,\n    \"maxTerm\": \"90 dias\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/creditLine",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"creditLine"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateCreditLine",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Credit line Master Card Oro\",\n    \"minAmount\": 100000,\n    \"maxAmount\": 5000000,\n    \"maxTerm\": \"90 dias\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:5000/api/v1/creditLine/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"creditLine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteCreditLine",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:5000/api/v1/creditLine/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "5000",
+							"path": [
+								"api",
+								"v1",
+								"creditLine",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
